@@ -1,11 +1,16 @@
-import React from 'react'
-import UseCounter from './hooks/UseCounter'
+import useCount from "./hooks/useCount"
+
 // import { useState } from 'react'
-export default function Task1() {
-  const[count,inc,dec]=UseCounter()
+function Task1() {
+  const[count,inc,dec]=useCount()
   return (
 
-   [count,inc,dec]
+    <div>
+       <h1>count:{count}</h1>
+      <button onClick={inc}>+</button>
+      <button onClick={dec}>_</button>
+    </div>
 
   )
 }
+export default Task1
